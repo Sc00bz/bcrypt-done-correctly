@@ -1,5 +1,5 @@
 # bcrypt HMAC
-Before you use you need to look at the "TODO"s in bcrypthmac.php and bcrypthmackeys.php. 
+If it can, using bcrypthmac.php for the first time will create a new random key in bcrypthmackeys.php.
 
 # Algorithm
 ```
