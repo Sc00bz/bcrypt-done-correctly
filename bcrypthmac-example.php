@@ -10,7 +10,7 @@ $newPassword = $newPassword2 = 'password1';
 // *** New user ***
 // ****************
 echo "****************<br />\n*** New user ***<br />\n****************<br />\n";
-$hash = bcryptHmac_hash($password);
+$hash = Sc00bz\bcrypt_done_correctly\BcryptHmac::hash($password);
 echo "TODO: Insert $hash into DB<br />\n"; // TODO: Insert $hash into DB
 
 
@@ -19,11 +19,11 @@ echo "TODO: Insert $hash into DB<br />\n"; // TODO: Insert $hash into DB
 // *************
 echo "<br />\n*************<br />\n*** Login ***<br />\n*************<br />\n";
 echo "TODO: Get $hash from DB<br />\n"; // TODO: Get $hash from DB
-if (bcryptHmac_verify($password, $hash))
+if (Sc00bz\bcrypt_done_correctly\BcryptHmac::verify($password, $hash))
 {
-	if (bcryptHmac_needsRehash($hash))
+	if (Sc00bz\bcrypt_done_correctly\BcryptHmac::needsRehash($hash))
 	{
-		$hash = bcryptHmac_hash($password);
+		$hash = Sc00bz\bcrypt_done_correctly\BcryptHmac::hash($password);
 		echo "TODO: Update $hash in DB<br />\n"; // TODO: Update $hash in DB
 	}
 	echo "TODO: User is logged in<br />\n"; // TODO: User is logged in
@@ -41,10 +41,10 @@ echo "<br />\n***********************<br />\n*** Change password ***<br />\n****
 if ($newPassword === $newPassword2)
 {
 	echo "TODO: Get $hash from DB<br />\n"; // TODO: Get $hash from DB
-	$check = bcryptHmac_verify($oldPassword, $hash);
+	$check = Sc00bz\bcrypt_done_correctly\BcryptHmac::verify($oldPassword, $hash);
 	if ($check)
 	{
-		$hash = bcryptHmac_hash($newPassword);
+		$hash = Sc00bz\bcrypt_done_correctly\BcryptHmac::hash($newPassword);
 		echo "TODO: Update $hash in DB<br />\n"; // TODO: Update $hash in DB
 		echo "TODO: Return success message to user<br />\n"; // TODO: Return success message to user
 	}
