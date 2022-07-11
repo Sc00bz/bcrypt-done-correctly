@@ -1,0 +1,31 @@
+{
+    "name": "sc00bz/bcrypt-done-correctly",
+    "description": "Bcrypt hashing done correctly",
+    "keywords": [
+        "sc00bz",
+        "bcrypt",
+        "bcrypt-done-correctly"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sc00bz\\BcryptDoneCorrectly\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sc00bz\\BcryptDoneCorrectly\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "php tests/test.php"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
